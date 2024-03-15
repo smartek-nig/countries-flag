@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <main>
+        <input type="range" name="range" id="range" min="6" max="10" step="1" placeholder="choose range of password" list="tickmarks">
+        <datalist id="tickmarks">
+            <option value="6">6 meters</option>
+            <option value="6.5">6.5 meters</option>
+            <option value="7">7 meters</option>
+            <option value="7.5">7.5 meters</option>
+            <option value="8">8 meters</option>
+            <option value="8.5">8.5 meters</option>
+            <option value="9">9 meters</option>
+            <option value="9.5">9.5 meters</option>
+            <option value="10">10 meters</option>
+        </datalist>
+
+
+        <span id="rangeValue"></span>
+
+        <div>
+            <input type="checkbox" name="special" id="special">
+            <label for="special">include special characters</label>
+        </div>
+        <div>
+            <input type="checkbox" name="numbers" id="numbers" >
+            <label for="numbers">include numbers</label>
+        </div>
+        <p></p>
+    </main>
+</body>
+
+<script>
+    const para = document.querySelector('p');
+    const inputs = document.querySelectorAll('input');
+    const rangeValue = document.getElementById('rangeValue');
+    
+    function password(){
+        let characters = 'qwertyuioplkjhgfdsazxcvbnmMNBVCXZASDFGHJKLPOIUYTREWQ'
+        const numbers = '0987654321'
+        const special = '!@#$%^&*()<>'
+        const valueInMeters = (inputs[0].value); // Convert to meters
+        rangeValue.textContent = `${valueInMeters} characters`; // Display the value in meters
+        const arr = []
+
+        for(let num = 1; num <= valueInMeters; num++){
+            if(inputs[1].checked){
+                characters += special 
+            }
+            if(inputs[2].checked){
+                characters += numbers 
+            }
+            arr.push(characters[Math.floor(Math.random()*characters.length)])
+        }
+        para.textContent = arr.join('')
+    }
+
+    inputs[0].addEventListener('input', password);
+</script>
+</html>
