@@ -3,7 +3,7 @@
 On each of the sections, using css pseudoclasses and gradient backgrounds apply the following:
 
 1. the first section have the Nigeria flag
-2. section section is japan flag
+2. second section is japan flag
 3. third section is gambia
 4. fourth is gabon
 5. fifth is france
