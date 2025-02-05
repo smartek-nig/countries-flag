@@ -1,15 +1,18 @@
-# Specificity in css
-
-On each of the sections, using css pseudoclasses and gradient backgrounds apply the following:
-
-1. the first section have the Nigeria flag
-2. second section is japan flag
-3. third section is gambia
-4. fourth is gabon
-5. fifth is france
-6. sixth is belgium
-7. seven is germany
-
-Be sure you are using the appropriate colors for the countries.
-
-Use pseudoclasses selector only.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countries flag</title>
+    <link rel="stylesheet" href="./count.css">
+</head>
+<body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+</body>
+</html>
